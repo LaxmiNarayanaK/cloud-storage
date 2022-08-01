@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:legacy
+
+    ports:
+      - "8080:8080"
+
+    environment:
+    
+      KEYCLOAK_USER: admin
+
+      KEYCLOAK_PASSWORD: admin
+
+      DB_ADDR: keycloak.cckjqtiuhl5f.us-east-1.rds.amazonaws.com
+
+      DB_USER: postgres
+
+      DB_PASSWORD: Anu95057$$
+
+      DB_VENDOR: postgres
+      
+      DB_DATABASE: keycloak_new
+      
+      DB_PORT: 5432
+      
+      # JAVA_OPTS_APPEND: "-Djboss.as.management.blocking.timeout=7200"
+      
+      # JDBC_PARAMS: "connectTimeout=30000"
